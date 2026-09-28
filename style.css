@@ -1,0 +1,119 @@
+*{
+  margin:0;
+  padding:0;
+  font-weight: normal;
+  font-size: medium;
+  font-family: 'Times New Roman', Times, serif, Helvetica, sans-serif;
+}
+
+/*Header styles */
+header{
+  padding:10px 30px;
+  margin: 20px;
+  box-shadow: 2px 2px rgb(255, 153, 189);
+  border-radius: 10px;
+  background-color: rgba(255, 153, 189);
+}
+
+header > h1{
+  font-size:x-large;
+  font-weight: bolder;
+  color:rgb(55, 54, 54);
+}
+
+header > small{
+  font-size: medium ;
+  font-weight: 100;
+  color: rgb(77, 76, 76);
+}
+
+/* Form Styles */
+#formContainer{
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 2px 2px rgba(255, 153, 189);
+  border-radius: 10px;
+    background-color: rgba(255, 153, 189);
+}
+
+#formContainer > #studentForm >.input-fields> label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#formContainer > #studentForm >.input-fields > input{
+  border: 2px rgb(62, 62, 62);
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+#formContainer > #studentForm >.input-fields{
+  display:flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.list-item{
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 5px 5px rgba(255, 153, 189);
+  border-radius: 20px;
+    background-color: rgb(255, 153, 189);
+}
+
+#formContainer > #studentForm :Last-child > button{
+    background-color: rgb(241, 173, 173);
+    padding: 10px;
+    margin: 20px;
+    border: 10px;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: medium;
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+#formContainer > #studentForm :Last-child {
+    display: flex;
+    justify-content:center;
+}
+
+#studentList > .list-item > button{
+  background-color: rgb(1, 1, 1);
+  color: white;
+  padding: 10px;
+  border: 10px;
+  border-radius: 10px;
+  font-weight: bolder;
+  cursor: pointer;
+
+}
+
+/*For list container*/
+#studentList{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+}
+
+/*Responsive Design */
+/*mobile*/
+@media (width <= 320px){
+  #studentList > .List-item{
+    grid-column: span 12;
+  }
+}
+
+/*mobile*/
+@media (width > 320px) and (width <= 600px){
+  #studentList > .list-item{
+    grid-column: span 4;
+  }
+}
+
+/* desktop*/
+@media (width >= 1000px){
+  #studentList > .list-item{
+    grid-column: span 2;
+  }
+}
